@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "google-connection-broker"
+version = "1.0.0"
+description = ""
+authors = ["Jon Bogaty <jon@jonbogaty.com>"]
+readme = "README.md"
+packages = [{include = "google_connection_broker"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+gitops-utils = {git = "https://github.com/jbcom/gitops-utils.git", branch = "main"}
+google-api-python-client = "^2.119.0"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
